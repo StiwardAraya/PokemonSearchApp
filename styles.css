@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Freckle+Face&family=Pixelify+Sans:wght@400..700&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --cake-blue: rgb(198, 231, 255);
+  --blue: rgb(74, 98, 138);
+  --light-blue: rgb(212, 246, 255);
+  --white: rgb(251, 251, 251);
+  --cake-orange: rgb(255, 221, 174);
+  --font-pixelated: "Pixelify Sans";
+  --font-freckle: "Freckle Face";
+}
+
+* {
+  box-sizing: border-box;
+  font-family: var(--font-pixelated);
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  background: linear-gradient(
+      to bottom,
+      rgba(251, 251, 251, 1),
+      rgba(251, 251, 251, 0.7)
+    ),
+    url(img/bg-img.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  height: 100dvh;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.main-container h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.container {
+  background-color: var(--white);
+  width: 1000px;
+  height: 600px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), -2px -2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+}
+
+.form-container {
+  background-color: var(--cake-orange);
+  flex-basis: 30%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-container label,
+.form-container input {
+  font-size: 1.7rem;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.form-container input:focus {
+  outline: none;
+}
+
+.form-container button {
+  font-size: 1.4rem;
+  padding: 5px;
+  background-color: var(--blue);
+  color: var(--white);
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+.form-container button:hover {
+  background-color: var(--white);
+  color: var(--blue);
+}
+
+.stats-container {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  line-height: 50px;
+  padding: 1px;
+}
+
+.shade {
+  background-color: rgb(240, 206, 159);
+}
+
+.headers {
+  margin-bottom: 5px;
+  justify-content: space-around;
+  font-size: 1.7rem;
+}
+
+.separator {
+  margin-top: 10px;
+  height: 2px;
+  width: 100%;
+  background-color: var(--blue);
+}
+
+.pokemon-display {
+  flex-basis: 70%;
+  margin: 10px;
+  border-radius: 7px;
+  background-color: var(--light-blue);
+  box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2),
+    inset -2px -2px 3px rgba(255, 255, 255, 0.6);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 5px;
+}
+
+.data {
+  flex-basis: 5%;
+  display: flex;
+  font-size: 1.2rem;
+  gap: 10px;
+}
+
+.image-container {
+  flex-basis: 85%;
+  background: url(https://cdn.dribbble.com/users/6245075/screenshots/16269935/pokeball.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokemon-sprite {
+  width: 50%;
+}
+
+#types {
+  flex-basis: 5%;
+  display: flex;
+  padding: 10px;
+  gap: 20px;
+}
+
+.type {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  background-color: red;
+  padding: 5px;
+  width: 100px;
+  text-align: center;
+  height: 50px;
+  line-height: 40px;
+}
+
+.normal {
+  background-color: #b7b7aa;
+  box-shadow: 1px 1px 3px #b7b7aa;
+}
+
+.fire {
+  background-color: #ff6f52;
+  box-shadow: 1px 1px 3px #ff6f52;
+}
+
+.water {
+  background-color: #42a1ff;
+  box-shadow: 1px 1px 3px #42a1ff;
+}
+
+.electric {
+  background-color: #fecc33;
+  box-shadow: 1px 1px 3px #fecc33;
+}
+
+.grass {
+  background-color: #78cc55;
+  box-shadow: 1px 1px 3px #78cc55;
+}
+
+.ice {
+  background-color: #66ccfe;
+  box-shadow: 1px 1px 3px #66ccfe;
+}
+
+.fighting {
+  background-color: #d3887e;
+  box-shadow: 1px 1px 3px #d3887e;
+}
+
+.poison {
+  background-color: #c68bb7;
+  box-shadow: 1px 1px 3px #c68bb7;
+}
+
+.ground {
+  background-color: #dfba52;
+  box-shadow: 1px 1px 3px #dfba52;
+}
+
+.flying {
+  background-color: #8899ff;
+  box-shadow: 1px 1px 3px #8899ff;
+}
+
+.psychic {
+  background-color: #ff66a3;
+  box-shadow: 1px 1px 3px #ff66a3;
+}
+
+.bug {
+  background-color: #aabb23;
+  box-shadow: 1px 1px 3px #aabb23;
+}
+
+.rock {
+  background-color: #baaa66;
+  box-shadow: 1px 1px 3px #baaa66;
+}
+
+.ghost {
+  background-color: #9995d0;
+  box-shadow: 1px 1px 3px #9995d0;
+}
+
+.dragon {
+  background-color: #9e93f1;
+  box-shadow: 1px 1px 3px #9e93f1;
+}
+
+.dark {
+  background-color: #b59682;
+  box-shadow: 1px 1px 3px #b59682;
+}
+
+.steel {
+  background-color: #abaabb;
+  box-shadow: 1px 1px 3px #abaabb;
+}
+
+.fairy {
+  background-color: #ed99ed;
+  box-shadow: 1px 1px 3px #ed99ed;
+}

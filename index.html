@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon Search</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="main-container">
+      <h1>Pokémon Search</h1>
+      <div class="container">
+        <div class="form-container">
+          <label for="search-input">Search for Pokémon Name or ID</label>
+          <input type="text" placeholder="Pikachu" id="search-input" required />
+          <button id="search-button">Search</button>
+          <div class="stats-container">
+            <div class="row headers">
+              <span>BASE</span>
+              <span>STATS</span>
+            </div>
+            <div class="row shade">
+              <span>HP:</span>
+              <span id="hp"></span>
+            </div>
+            <div class="row">
+              <span>ATTACK:</span>
+              <span id="attack"></span>
+            </div>
+            <div class="row shade">
+              <span>DEFENSE:</span>
+              <span id="defense"></span>
+            </div>
+            <div class="row">
+              <span>SP. ATTACK:</span>
+              <span id="special-attack"></span>
+            </div>
+            <div class="row shade">
+              <span>SP. DEFENSE:</span>
+              <span id="special-defense"></span>
+            </div>
+            <div class="row">
+              <span>SPEED:</span>
+              <span id="speed"></span>
+            </div>
+          </div>
+          <div class="separator"></div>
+        </div>
+        <div class="pokemon-display">
+          <div class="data">
+            <span id="pokemon-name"></span>
+            <span id="pokemon-id"></span>
+          </div>
+          <div class="data">
+            <span id="weight"></span>
+            <span id="height"></span>
+          </div>
+          <div class="image-container" id="sprite-container"></div>
+          <div id="types"></div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
